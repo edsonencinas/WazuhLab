@@ -15,7 +15,7 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 
 ## What You Need Before You Start?
 
-- **Azure account** (Free tier is fine!  Once you sign up an account in Azure you will get $200 credits. The free credit is more than enough for this project)
+- **Azure account** (Free tier is fine!  Once you sign up an account in Azure you will get $200 credits. Your free credits is more than enough for this project)
 - Basic familiarity with Azure portal and Linux commands
 - A computer with internet access
 - Lots of Patience and curiosity!
