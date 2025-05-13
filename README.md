@@ -40,6 +40,8 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 3. Next, it's important that the Wazuh Indexer, Wazuh Server, Wazuh Dashboard all sit in one virtual subnet, so we need to create one. Select the **wazuh-homelab** resource group and let's name it **wazuh-virtualsubnet** (Naming template is all up to you). We only need few private addresses, so let's change the default subnet to /28 notation (You need some basic knowledge of networking here).
 
 ![azure_2](https://github.com/user-attachments/assets/a37faf20-2873-422a-ba0b-5953e87883cf)
+![azure_3](https://github.com/user-attachments/assets/6995751d-de3e-4840-8d23-d388cd1f29e8)
+
 
 5. Click Create a resource > Virtual Machine.
 6. Choose Ubuntu Server 20.04 LTS (a popular Linux distro).
