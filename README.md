@@ -33,7 +33,7 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 ### 1.1 Create the Wazuh Indexer/Dashboard VM
 
 1. Log in to https://portal.azure.com.
-2. Create a Resource Group, select your free tier subscription, be descriptive with the resource group name ( I name it wazuh-homelab), then click **Review + creatte**.
+2. Create a Resource Group, select your free tier subscription, be descriptive with the resource group name ( I name it wazuh-homelab), select your preferred region, then click **Review + creatte**.
    
  ![azure-1](https://github.com/user-attachments/assets/387c12ee-f4d2-42d2-82f8-2f8e89821a1b)
 
