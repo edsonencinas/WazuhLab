@@ -22,12 +22,15 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 
 ## Step 1: Create Your Azure Virtual Machines (VMs)
 
-We'll need a couple of VMs:
+**We'll need a couple of VMs:**
 
-- **Wazuh Manager**: The brain that collects and analyzes logs
-- **Wazuh Agent**: Installed on other machines or VMs to send logs to the manager
-
-### 1.1 Create the Wazuh Manager VM
+- **Wazuh Indexer**: The centra component that indexes and stores alerts from the wazuh server
+- **Wazuh Dashboard**: Provides web interface for analyzing, mining, and visualizing data
+- **Wazuh Server**: It analyzes the data received from the Wazuh agents
+- **Wazuh Agent**: Installed on other machines or VMs to send logs, data to the server
+  Note: For this tutorial we will use only one VM for Wazuh Indexer and Wazuh Dashboard to optimize resources.
+  
+### 1.1 Create the Wazuh Indexer/Dashboard VM
 
 Log in to https://portal.azure.com.
 Click Create a resource > Virtual Machine.
