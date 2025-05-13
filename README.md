@@ -28,13 +28,16 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 - **Wazuh Dashboard**: Provides web interface for analyzing, mining, and visualizing data
 - **Wazuh Server**: It analyzes the data received from the Wazuh agents
 - **Wazuh Agent**: Installed on other machines or VMs to send logs, data to the server  
-_Note: For this tutorial we will use only one VM for Wazuh Indexer and Wazuh Dashboard to optimize resources._
+> Note: For this tutorial we will use only one VM for Wazuh Indexer and Wazuh Dashboard to optimize resources._
   
 ### 1.1 Create the Wazuh Indexer/Dashboard VM
 
 1. Log in to https://portal.azure.com.
-2. Click Create a resource > Virtual Machine.
-3. Choose Ubuntu Server 20.04 LTS (a popular Linux distro).
+2. Create a Resource Group
+ ![azure-1](https://github.com/user-attachments/assets/387c12ee-f4d2-42d2-82f8-2f8e89821a1b)
+  
+4. Click Create a resource > Virtual Machine.
+5. Choose Ubuntu Server 20.04 LTS (a popular Linux distro).
 Fill in the details:
 Name: Wazuh-Manager
 Region: your choice
