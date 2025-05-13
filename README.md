@@ -41,7 +41,6 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 
 ![azure_2](https://github.com/user-attachments/assets/a37faf20-2873-422a-ba0b-5953e87883cf)
 
-  
 5. Click Create a resource > Virtual Machine.
 6. Choose Ubuntu Server 20.04 LTS (a popular Linux distro).
 Fill in the details:
