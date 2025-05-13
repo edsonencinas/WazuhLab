@@ -1,6 +1,6 @@
 # Building Your Cybersecurity Homelab Project: Setting Up Wazuh Open-Source SIEM in Azure
 
-**Introduction
+### Introduction
 
 Are you a cybersecurity enthusiast, student, or someone eager to learn more about security monitoring? Setting up a Wazuh SIEM in your own Azure homelab is a fantastic way to get hands-on experience with real-world security tools.
 
