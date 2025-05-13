@@ -27,9 +27,8 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 - **Wazuh Indexer**: The centra component that indexes and stores alerts from the wazuh server
 - **Wazuh Dashboard**: Provides web interface for analyzing, mining, and visualizing data
 - **Wazuh Server**: It analyzes the data received from the Wazuh agents
-- **Wazuh Agent**: Installed on other machines or VMs to send logs, data to the server
-  
-  _Note: For this tutorial we will use only one VM for Wazuh Indexer and Wazuh Dashboard to optimize resources._
+- **Wazuh Agent**: Installed on other machines or VMs to send logs, data to the server  
+_Note: For this tutorial we will use only one VM for Wazuh Indexer and Wazuh Dashboard to optimize resources._
   
 ### 1.1 Create the Wazuh Indexer/Dashboard VM
 
