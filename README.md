@@ -2,32 +2,32 @@
 
 ### Introduction
 
-Are you a cybersecurity enthusiast, student, or someone eager to learn more about security monitoring? Setting up a Wazuh SIEM in your own Azure homelab is a fantastic way to get hands-on experience with real-world security tools.
+Are you a cybersecurity enthusiast, student, or someone eager to learn more about security monitoring? Setting up a **Wazuh SIEM** in your own Azure homelab is a fantastic way to get hands-on experience with real-world security tools.
 
 In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giving you a powerful security monitoring setup to practice detecting threats, analyzing logs, and understanding security operations — all in your own cloud environment!
 
-Why Set Up a Wazuh SIEM in Azure?
+## Why Set Up a Wazuh SIEM in Azure?
 
-Learn security monitoring** in a controlled environment
-Simulate attacks** and see how Wazuh detects them
-Understand SIEM components** like managers, agents, dashboards
-Build skills** valuable for cybersecurity careers
+- **Learn security monitoring** in a controlled environment
+- **Simulate attacks** and see how Wazuh detects them
+- **Understand SIEM components** like indexer, server, dashboard, agents
+- **Build skills** valuable for cybersecurity careers
 
-What You Need Before You Start
+## What You Need Before You Start?
 
-Azure account** (free tier is fine)
-Basic familiarity with Azure portal and Linux commands
-A computer with internet access
-Patience and curiosity!
+- **Azure account** (Free tier is fine!  Once you sign up an account in Azure you will get $200 credits. The free credit is more than enough for this project)
+- Basic familiarity with Azure portal and Linux commands
+- A computer with internet access
+- Lots of Patience and curiosity!
 
-Step 1: Create Your Azure Virtual Machines (VMs)
+## Step 1: Create Your Azure Virtual Machines (VMs)
 
 We'll need a couple of VMs:
 
-Wazuh Manager**: The brain that collects and analyzes logs
-Wazuh Agent**: Installed on other machines or VMs to send logs to the manager
+- **Wazuh Manager**: The brain that collects and analyzes logs
+- **Wazuh Agent**: Installed on other machines or VMs to send logs to the manager
 
-1.1 Create the Wazuh Manager VM
+### 1.1 Create the Wazuh Manager VM
 
 Log in to https://portal.azure.com.
 Click Create a resource > Virtual Machine.
@@ -39,11 +39,11 @@ Size: e.g., Standard_B1s (enough for learning)
 Authentication: SSH public key (or password)
 Review and click Create.
 
-1.2 Create the Wazuh Agent VM(s)
+### 1.2 Create the Wazuh Agent VM(s)
 
 Repeat the above process for each additional VM you want (for example, a Windows machine or another Linux box to simulate a target system).
 
-Step 2: Prepare Your Wazuh Manager
+## Step 2: Prepare Your Wazuh Manager
 
 2.1 Connect to your VM
 
@@ -72,7 +72,7 @@ sudo systemctl enable wazuh-manager
 
 Your Wazuh Manager is now running!
 
-Step 3: Install Wazuh Agent on Other Machines
+## Step 3: Install Wazuh Agent on Other Machines
 
 On each machine you want to monitor:
 
@@ -102,7 +102,7 @@ Follow the prompts. This links the agent to the manager.
 sudo systemctl start wazuh-agent
 sudo systemctl enable wazuh-agent
 
-Step 4: Access and Use Your Wazuh Dashboard
+## Step 4: Access and Use Your Wazuh Dashboard
 
 While setting up a full web dashboard can be complex, you can:
 
@@ -111,27 +111,26 @@ Install Wazuh Kibana plugin if you want a visual dashboard (advanced)
 
 For now, you can verify logs and alerts via the command line, or experiment with installing Wazuh Dashboard on a separate VM.
 
-Step 5: Practice and Explore!
+## Step 5: Practice and Explore!
 
 Generate some logs by running commands or simulating attacks
 Check the logs on your Wazuh manager
 Learn how Wazuh detects suspicious activities
 Set up alerts and notifications (advanced)
 
-Final Tips
+### Final Tips
 
-Keep your Azure resources within a budget — use free tiers!
-Experiment with different types of logs and configurations
-Join online communities (like Wazuh forums) for help
-Always practice safely — avoid testing on production environments!
+- Keep your Azure resources within a budget — use free tiers!
+- Experiment with different types of logs and configurations
+- Join online communities (like Wazuh forums) for help
+- Always practice safely — avoid testing on production environments!
 
-Conclusion
+### Conclusion
 
 Congratulations! You’ve built your own cybersecurity homelab in Azure with Wazuh SIEM. This setup is a fantastic sandbox to learn about security monitoring, log analysis, and incident detection — essential skills for any cybersecurity enthusiast.
 
 Keep experimenting, learning, and exploring — the cybersecurity world is full of challenges and opportunities!
 
-Happy hunting!
+**Happy hunting!**
 Your journey into cybersecurity mastery starts here.
 
-Would you like me to include screenshots, diagrams, or more advanced topics like integrating dashboards or setting up alerts?
