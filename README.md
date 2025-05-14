@@ -51,15 +51,21 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 - Let's name the virtual **machine, wazuh-indexer-dashboard**
 - Be consistent with the region selection: ((Asia Pacific) South East Asia)
 - For the Availability options you  can select No infrastructure redundancy required or just select one availability zone on the list
-- Image: Ubuntu Server 24.04 LTS - x64 Gen 2 (popular Linuz distro)
-- 
-7. Choose Ubuntu Server 20.04 LTS (a popular Linux distro).
-Fill in the details:
-Name: Wazuh-Manager
-Region: your choice
-Size: e.g., Standard_B1s (enough for learning)
-Authentication: SSH public key (or password)
-Review and click Create.
+- Image: Ubuntu Server 24.04 LTS - x64 Gen 2 (popular Linux distro)
+- Size: Standard_B2als_v2 - 2vcpus, 4 GiB memory (minimum system requirement of wazuh)
+- Authentication: I choose SSH public key but you can select password
+
+### Disks
+- Keep the default
+
+### Networking
+- **Virtual Network**: Let's select **wazuh-virtualnet** (created earlier)
+- **Subnet** : This will be filled automatically, /28 will give us 14 usable IP addresses (more than enough)
+- Leave everything as is
+- Select Review + create
+    
+![azure_5](https://github.com/user-attachments/assets/a6a209f8-b27c-434e-a062-8f9ef65b2279)
+
 
 ### 1.2 Create the Wazuh Agent VM(s)
 
