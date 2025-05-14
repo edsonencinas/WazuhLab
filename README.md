@@ -104,8 +104,7 @@ Example:
 
 Run these commands to install Wazuh:
 
-`curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh`
-
+`curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh`</br>
 `curl -sO https://packages.wazuh.com/4.12/config.yml`
 
 Update packages
