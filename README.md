@@ -46,7 +46,7 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 5. Let's create the VM for indexer and dashboard. As I said earlier we will install the indexer and the dashboard on the same VM. Click Create a resource > Virtual Machine.
 
 ### VM Instance details:
-- Let's name the virtual **machine, wazuh-indexer-dashboard**
+- Let's name the virtual machine, **wazuh-indexer-dashboard**
 - Be consistent with the region selection: ((Asia Pacific) South East Asia)
 - For the Availability options you  can select No infrastructure redundancy required or just select one availability zone on the list
 - Image: Ubuntu Server 24.04 LTS - x64 Gen 2 (popular Linux distro)
@@ -55,7 +55,7 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
   
 ![azure_4](https://github.com/user-attachments/assets/2d9f761a-d875-4ece-bc94-0e8d9787b8e3)
 
-- Username: I name it **vmadmin**
+- Username: **vmadmin**
 - We will connect to the VM through SSH later, so we need to open the inbound port 22 (SSH)
   
 ![azure_6](https://github.com/user-attachments/assets/24d1620c-c5cd-4a2e-b64d-4ffa73c55938)
@@ -76,10 +76,17 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 
 ![azure_7](https://github.com/user-attachments/assets/bc1065cb-201e-4bd1-be78-8f1b9e40b4f2)
 
-### 1.2 Create the Wazuh Agent VM(s)
+### 1.2 Create the Wazuh Server VM
 
-Repeat the above process for each additional VM you want (for example, a Windows machine or another Linux box to simulate a target system).
+- Repeat the above process for additional VM
+- Let's name this VM **wazuh-server**   
 
+### 1.3 Create the Wazuh Agent VM
+
+- Repeat the above process in 1.1 for Wazuh Agent VM
+- Image: I choose **Windows 10 Pro, version 22H2 - x64** this time (Wazuh agent can be installed in Linux, Windows, MacOS, etc..) 
+- Let's name this VM **wazuh-agent**
+  
 ## Step 2: Prepare Your Wazuh Manager
 
 2.1 Connect to your VM
