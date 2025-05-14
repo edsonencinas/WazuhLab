@@ -89,6 +89,7 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
   
 ## Step 2: Prepare Your Wazuh Manager
 
+At this point we already have three VMs, **wazuh-indexer-dashboard**, **wazuh-server**, and **wazuh-agent**. Next, we will install wazuh components to this VMs. For more detailed instructions you can visit the Wazuh Installation Guide.
 2.1 Connect to your VM
 
 Open your terminal or command prompt:
