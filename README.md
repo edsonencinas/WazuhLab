@@ -96,6 +96,7 @@ At this point we already have three VMs, **wazuh-indexer-dashboard**, **wazuh-se
 Open your terminal or command prompt:
 
 > ssh -i '/path/to/keyfile' username@server
+
 Example:
 > ssh -i wazuh-indexer-dashboard-key.pem vmadmin@172.108.242.113
 
@@ -103,7 +104,7 @@ Example:
 
 Run these commands to install Wazuh:
 
-> curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh
+> `curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh`
 > curl -sO https://packages.wazuh.com/4.12/config.yml
 
 Update packages
