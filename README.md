@@ -111,8 +111,9 @@ Example:
 
 `nano /home/vmadmin/config.yml`
 
-![azure_8](https://github.com/user-attachments/assets/96b36f86-6518-4a88-b9e0-95d28fda22d1)
+![azure_9](https://github.com/user-attachments/assets/c9aa1026-8aef-49b1-88f8-8b34c386f49c)
 
+> You can find the private IP address of your VM in the Networking tab.
 
 Update packages
 sudo apt update && sudo apt upgrade -y
