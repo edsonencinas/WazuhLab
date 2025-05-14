@@ -37,14 +37,23 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
    
 ![azure_1](https://github.com/user-attachments/assets/03a7c2be-90f4-45cf-bdef-9c5ea536ac9e)
 
-3. Next, it's important that the Wazuh Indexer, Wazuh Server, Wazuh Dashboard all sit in one virtual subnet, so we need to create one. Select the **wazuh-homelab** resource group and let's name it **wazuh-virtualsubnet** (Naming template is all up to you). We only need few private addresses, so let's change the default subnet to /28 notation (You need some basic knowledge of networking here).
+3. Next, it's important that the Wazuh Indexer, Wazuh Server, Wazuh Dashboard all sit in one virtual subnet, so we need to create one. Click Create resource then find Virtual network. Select the **wazuh-homelab** resource group and let's name it **wazuh-virtualsubnet** (Naming template is all up to you). We only need few private addresses, so let's change the default subnet to /28 notation (You need some basic knowledge of networking here).
 
 ![azure_2](https://github.com/user-attachments/assets/a37faf20-2873-422a-ba0b-5953e87883cf)
 ![azure_3](https://github.com/user-attachments/assets/6995751d-de3e-4840-8d23-d388cd1f29e8)
 
 
-5. Click Create a resource > Virtual Machine.
-6. Choose Ubuntu Server 20.04 LTS (a popular Linux distro).
+5. Let's create the VM for indexer and dashboard. As I said earlier we will install the indexer and the dashboard on the same VM. Click Create a resource > Virtual Machine.
+   
+![azure_4](https://github.com/user-attachments/assets/2d9f761a-d875-4ece-bc94-0e8d9787b8e3)
+
+### VM Instance details:
+- Let's name the virtual **machine, wazuh-indexer-dashboard**
+- Be consistent with the region selection: ((Asia Pacific) South East Asia)
+- For the Availability options you  can select No infrastructure redundancy required or just select one availability zone on the list
+- Image: Ubuntu Server 24.04 LTS - x64 Gen 2 (popular Linuz distro)
+- 
+7. Choose Ubuntu Server 20.04 LTS (a popular Linux distro).
 Fill in the details:
 Name: Wazuh-Manager
 Region: your choice
