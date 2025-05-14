@@ -44,8 +44,6 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 
 
 5. Let's create the VM for indexer and dashboard. As I said earlier we will install the indexer and the dashboard on the same VM. Click Create a resource > Virtual Machine.
-   
-![azure_4](https://github.com/user-attachments/assets/2d9f761a-d875-4ece-bc94-0e8d9787b8e3)
 
 ### VM Instance details:
 - Let's name the virtual **machine, wazuh-indexer-dashboard**
@@ -54,6 +52,13 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 - Image: Ubuntu Server 24.04 LTS - x64 Gen 2 (popular Linux distro)
 - Size: Standard_B2als_v2 - 2vcpus, 4 GiB memory (minimum system requirement of wazuh)
 - Authentication: I choose SSH public key but you can select password
+  
+![azure_4](https://github.com/user-attachments/assets/2d9f761a-d875-4ece-bc94-0e8d9787b8e3)
+
+- Username: I name it **vmadmin**
+- We will connect to the VM through SSH later, so we need to open the inbound port 22 (SSH)
+  
+![azure_6](https://github.com/user-attachments/assets/24d1620c-c5cd-4a2e-b64d-4ffa73c55938)
 
 ### Disks
 - Keep the default
@@ -62,10 +67,14 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 - **Virtual Network**: Let's select **wazuh-virtualnet** (created earlier)
 - **Subnet** : This will be filled automatically, /28 will give us 14 usable IP addresses (more than enough)
 - Leave everything as is
-- Select Review + create
+- Select **Review + create**
     
 ![azure_5](https://github.com/user-attachments/assets/a6a209f8-b27c-434e-a062-8f9ef65b2279)
 
+- Click **create** again, after that Azure will create and deploy the VM instance
+- You will be prompted to download the SSH private key, download and keep it. (We need it later during wazuh installation)
+
+![azure_7](https://github.com/user-attachments/assets/bc1065cb-201e-4bd1-be78-8f1b9e40b4f2)
 
 ### 1.2 Create the Wazuh Agent VM(s)
 
