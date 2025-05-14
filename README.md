@@ -102,10 +102,17 @@ Example:
 
 2.2 Install Wazuh Indexer
 
-Run these commands to install Wazuh:
+1. Run these commands to install Wazuh:
 
 `curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh`</br>
 `curl -sO https://packages.wazuh.com/4.12/config.yml`
+
+2. Using **nano** editor let's edit the `config.yml` and replace the nodes name and IP addresses.
+
+`nano /home/vmadmin/config.yml`
+
+![azure_8](https://github.com/user-attachments/assets/96b36f86-6518-4a88-b9e0-95d28fda22d1)
+
 
 Update packages
 sudo apt update && sudo apt upgrade -y
