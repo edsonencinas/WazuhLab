@@ -91,7 +91,8 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 
 At this point we already have three VMs, **wazuh-indexer-dashboard**, **wazuh-server**, and **wazuh-agent**. Next, we will install wazuh components to this VMs. For more detailed instructions you can visit the [Wazuh Installation Guide](https://documentation.wazuh.com/current/installation-guide/index.html).
 
-2.1 Connect to **wazuh-indexer-dashboard** VM
+Wazuh Indexer Installation: 
+1. Connect to **wazuh-indexer-dashboard** VM
 
 Open your terminal or command prompt:
 
@@ -100,20 +101,29 @@ Open your terminal or command prompt:
 Example:
 `ssh -i wazuh-indexer-dashboard-key.pem vmadmin@172.108.242.113`
 
-2.2 Install Wazuh Indexer
-
-1. Run these commands to install Wazuh:
-
+2. Let's download the wazuh installation assistant and configuration file by executing the following command:
+  
 `curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh`</br>
 `curl -sO https://packages.wazuh.com/4.12/config.yml`
 
-2. Using **nano** editor let's edit the `config.yml` and replace the nodes name and IP addresses.
+3. Using **nano** editor let's edit the `config.yml` and replace the nodes name and IP addresses.
 
 `nano /home/vmadmin/config.yml`
 
 ![azure_9](https://github.com/user-attachments/assets/c9aa1026-8aef-49b1-88f8-8b34c386f49c)
 
 > You can find the private IP address of your VM in the Networking tab.
+
+4. Let's execute the Wazuh installation assistant with the option `--generate-config-files`.  This command will generate the file `wazuh-install-files.tar` which contain the Wazuh cluster key, certificates, and passwords necesssary for installation.
+
+> `sudo bash wazuh-install.sh --generate-config-files`
+
+5. It's necessary to copy the `wazuh-install-files.tar` file to all the two VMs that we created earlier and place it inside your working folder. You can use the `scp` command to copy the file securely.
+   
+6. Let's run the Wazuh Installation assistant by including this option `--wazuh-indexer` and the name of the node (wazuh-indexer-dashboard). The node name must be the same in the `config.yml` file.
+
+> `sudo bash wazuh-install.sh --wazuh-indexer wazuh-indexer-dashboard`
+
 
 Update packages
 sudo apt update && sudo apt upgrade -y
