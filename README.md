@@ -98,14 +98,14 @@ Open your terminal or command prompt:
 > ssh -i '/path/to/keyfile' username@server
 
 Example:
-> ssh -i wazuh-indexer-dashboard-key.pem vmadmin@172.108.242.113
+`ssh -i wazuh-indexer-dashboard-key.pem vmadmin@172.108.242.113`
 
 2.2 Install Wazuh Indexer
 
 Run these commands to install Wazuh:
 
-> `curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh`
-> curl -sO https://packages.wazuh.com/4.12/config.yml
+`curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh`
+`curl -sO https://packages.wazuh.com/4.12/config.yml`
 
 Update packages
 sudo apt update && sudo apt upgrade -y
