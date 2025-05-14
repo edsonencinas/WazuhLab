@@ -87,19 +87,24 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 - Image: I choose **Windows 10 Pro, version 22H2 - x64** this time (Wazuh agent can be installed in Linux, Windows, MacOS, etc..) 
 - Let's name this VM **wazuh-agent**
   
-## Step 2: Prepare Your Wazuh Manager
+## Step 2: Prepare The Wazuh Manager (Indexer, Server and Dashboard)
 
 At this point we already have three VMs, **wazuh-indexer-dashboard**, **wazuh-server**, and **wazuh-agent**. Next, we will install wazuh components to this VMs. For more detailed instructions you can visit the [Wazuh Installation Guide](https://documentation.wazuh.com/current/installation-guide/index.html).
 
-2.1 Connect to your VM
+2.1 Connect to **wazuh-indexer-dashboard** VM
 
 Open your terminal or command prompt:
 
-ssh your-username@
+> ssh -i '/path/to/keyfile' username@server
+Example:
+> ssh -i wazuh-indexer-dashboard-key.pem vmadmin@172.108.242.113
 
-2.2 Install Wazuh Manager
+2.2 Install Wazuh Indexer
 
 Run these commands to install Wazuh:
+
+> curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh
+> curl -sO https://packages.wazuh.com/4.12/config.yml
 
 Update packages
 sudo apt update && sudo apt upgrade -y
