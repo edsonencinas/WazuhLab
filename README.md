@@ -181,7 +181,10 @@ A warning message will appear stating that the certificate was not issued by a t
 
 ![azure_12](https://github.com/user-attachments/assets/b7193dc7-f7e1-4530-885a-da58acbac6d0)
 
-Install Wazuh Agent
+## Step 5: Install Wazuh Agent
+
+Wazuh agent is a multi-platform component of Wazuh. It runs on the endpoints (computers, servers, etc.) that you want to monitor. After you install Wazuh indexer, Wazuh server, and Wazuh dashboard you are now ready to install atleast one Wazuh agent to monitor.
+
 sudo apt install wazuh-agent -y
 
 3.1 Register the Agent
