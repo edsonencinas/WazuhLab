@@ -4,6 +4,8 @@
 
 Are you a cybersecurity enthusiast, student, or someone eager to learn more about security monitoring? Setting up a **Wazuh SIEM** in your own Azure homelab is a fantastic way to get hands-on experience with real-world security tools.
 
+![azure_10](https://github.com/user-attachments/assets/74644e40-8e10-4ed5-978e-e2f2cc9d31b4)
+
 In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giving you a powerful security monitoring setup to practice detecting threats, analyzing logs, and understanding security operations — all in your own cloud environment!
 
 ## Why Set Up a Wazuh SIEM in Azure?
