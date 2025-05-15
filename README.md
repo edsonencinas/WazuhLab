@@ -177,7 +177,7 @@ As I stress out ealier, we will install the Wazuh Dashboard in the `wazuh-indexe
 > - **Username**: `admin`
 > - **Password**: `<ADMIN_PASSOWRD>`
 
-A warning message will appear stating that the certificate was not issued by a trusted authority. We will accept it since this is only for lab purpose. However, you can add the certifcate in the advanced options of the web browser. The file `root-ca.pem` (You can find this file in the wazuh indexer VM) can be imported to the certificate manager of the browser.
+A warning message will appear stating that the certificate was not issued by a trusted authority. We will accept it since this is only for lab purpose, however, you can add the certifcate in the advanced options of the web browser. The file `root-ca.pem` can be imported to the certificate manager of the browser. You can find this file in `/etc/wazuh-indexer/certs/` folder of the Wazuh indexer.
 
 ![azure_12](https://github.com/user-attachments/assets/b7193dc7-f7e1-4530-885a-da58acbac6d0)
 
