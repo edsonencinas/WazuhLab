@@ -173,7 +173,7 @@ As I stress out ealier, we will install the Wazuh Dashboard in the `wazuh-indexe
 
 6. Let's access the Wazuh dashboard using any browser. Use the `admin` user credentials from the `wazuh-passwords.txt` file.
 
-> -**URL**: `https://<WAZUH_DASHBOARD_IP_ADDRESS>
+> - **URL**: `https://<WAZUH_DASHBOARD_IP_ADDRESS>
 > - **Username**: `admin`
 > - **Password**: `<ADMIN_PASSOWRD>`
 
