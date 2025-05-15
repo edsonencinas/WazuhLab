@@ -203,7 +203,7 @@ Wazuh agent is a multi-platform component of Wazuh. It runs on the endpoints (co
 
 4. Open the Powershell in our Windows agent, In the **Run the following commands to download and install the agent** box, copy then paste it in the Powershell terminal.
 
-![azure_14](https://github.com/user-attachments/assets/cb221141-371f-4ccc-8b30-ece80e811def)
+<img src="https://github.com/user-attachments/assets/cb221141-371f-4ccc-8b30-ece80e811def" width="500">
 
 5. Finally, start the agent by executing `NET START WazuhSvc`. 
  
