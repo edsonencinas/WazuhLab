@@ -98,7 +98,7 @@ Wazuh Indexer Installation:
 
 Open your terminal or command prompt:
 
-> ssh -i '/path/to/keyfile' username@server
+> `ssh -i '/path/to/keyfile' username@server`
 
 Example:
 `ssh -i wazuh-indexer-dashboard-key.pem vmadmin@172.108.242.113`
@@ -132,15 +132,15 @@ Example:
 
 8. To get the _admin password_, run the following command:
 
-> tar -axf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt -O | grep -P "\'admin\'" -A 1
+> `tar -axf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt -O | grep -P "\'admin\'" -A 1`
 
 9. To confirm if the installation is succesfull, run the following command. Copy and paste the correct `<ADMIN_PASSWORD>` from the output and replace the `<WAZUH_INDEXER_IP>` (check the private IP address on the VMs Networking details).
 
-> curl -k -u admin:<ADMIN_PASSWORD> https://<WAZUH_INDEXER_IP>:9200
+> `curl -k -u admin:<ADMIN_PASSWORD> https://<WAZUH_INDEXER_IP>:9200`
 
 10. Finally, run the following command to check if the cluster is working correctly:
 
-> curl -k -u admin:<ADMIN_PASSWORD> https://<WAZUH_INDEXER_IP>:9200/_cat/nodes?v
+> `curl -k -u admin:<ADMIN_PASSWORD> https://<WAZUH_INDEXER_IP>:9200/_cat/nodes?v`
 
 ## Step 3: Wazuh Server Installation
 
