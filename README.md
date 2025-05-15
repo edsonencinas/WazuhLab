@@ -193,25 +193,26 @@ Wazuh agent is a multi-platform component of Wazuh. It runs on the endpoints (co
 
 ![azure_16](https://github.com/user-attachments/assets/4ec2449a-9e94-457c-8d41-79e950863c8c)
 
-3. Let's select Windows as it is the OS of the first Wazuh agent we configured earlier. Follow the instrucstions and fill-up the needed information.
+3. Let's select Windows as it is the OS of the first Wazuh agent we configured earlier. Follow the instructions and fill-up the needed information.
 
+![azure_15](https://github.com/user-attachments/assets/0341e357-dcb0-445c-a902-97c8b7f88413)
 
-   
-## Step 4: Access and Use Your Wazuh Dashboard
+- **Server Address**: This is the Public IP address of the wazuh-server.
+- **Assign an agent name**: (Optional) It uses the hostname of the agent name by default but you can use different agent name.
+- **Select one or more existing groups**: You can ccreate group in the Agent management tab.
 
-While setting up a full web dashboard can be complex, you can:
+4. Open the Powershell in our Windows agent, In the **Run the following commands to download and install the agent** box, copy then paste it in the Powershell terminal.
 
-Use Wazuh API to check logs
-Install Wazuh Kibana plugin if you want a visual dashboard (advanced)
+![azure_14](https://github.com/user-attachments/assets/cb221141-371f-4ccc-8b30-ece80e811def)
 
-For now, you can verify logs and alerts via the command line, or experiment with installing Wazuh Dashboard on a separate VM.
+5. Finally, start the agent by executing `NET START WazuhSvc`. 
+ 
+## Step 6: Practice and Explore!
 
-## Step 5: Practice and Explore!
-
-Generate some logs by running commands or simulating attacks
-Check the logs on your Wazuh manager
-Learn how Wazuh detects suspicious activities
-Set up alerts and notifications (advanced)
+- Generate some logs by running commands or simulating attacks
+- Check the logs on your Wazuh manager
+- Learn how Wazuh detects suspicious activities
+- Set up alerts and notifications (advanced)
 
 ### Final Tips
 
@@ -226,6 +227,4 @@ Congratulations! You’ve built your own cybersecurity homelab in Azure with Waz
 
 Keep experimenting, learning, and exploring — the cybersecurity world is full of challenges and opportunities!
 
-**Happy hunting!**
-Your journey into cybersecurity mastery starts here.
 
