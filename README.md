@@ -185,21 +185,18 @@ A warning message will appear stating that the certificate was not issued by a t
 
 Wazuh agent is a multi-platform component of Wazuh. It runs on the endpoints (computers, servers, etc.) that you want to monitor. After you install Wazuh indexer, Wazuh server, and Wazuh dashboard you are now ready to install atleast one Wazuh agent to monitor.
 
-sudo apt install wazuh-agent -y
+1. Let's connect to our wazuh-agent VM (Windows) using RDP.
+   
+![azure_13](https://github.com/user-attachments/assets/9ad1abab-16f1-43b5-b3e8-376b4fa14d55)
 
-3.1 Register the Agent
+2. Go to the **Endpoint** tab then click **Deploy new agent**.
 
-On the agent VM:
+![azure_16](https://github.com/user-attachments/assets/4ec2449a-9e94-457c-8d41-79e950863c8c)
 
-sudo /var/ossec/bin/agent-auth -m
+3. Let's select Windows as it is the OS of the first Wazuh agent we configured earlier. Follow the instrucstions and fill-up the needed information.
 
-Follow the prompts. This links the agent to the manager.
 
-3.2 Start the Agent
-
-sudo systemctl start wazuh-agent
-sudo systemctl enable wazuh-agent
-
+   
 ## Step 4: Access and Use Your Wazuh Dashboard
 
 While setting up a full web dashboard can be complex, you can:
