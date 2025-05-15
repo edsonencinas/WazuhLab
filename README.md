@@ -169,7 +169,7 @@ As I stress out ealier, we will install the Wazuh Dashboard in the `wazuh-indexe
 
 5. The Wazuh server utilize TCP port 1514 and 1515 for it to function. Let's create inbound rule in the **Networking** tab of the `wazuh-server` VM.
 
-![azure_11](https://github.com/user-attachments/assets/7f2338db-1709-4fd2-b06e-351c15a1bc67)
+<img src="https://github.com/user-attachments/assets/7f2338db-1709-4fd2-b06e-351c15a1bc67" width="500">
 
 6. Let's access the Wazuh dashboard using any browser. Use the `admin` user credentials from the `wazuh-passwords.txt` file.
 
