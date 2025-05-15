@@ -134,6 +134,16 @@ Example:
 
 > tar -axf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt -O | grep -P "\'admin\'" -A 1
 
+9. To confirm if the installation is succesfull, run the following command. Copy and paste the correct `<ADMIN_PASSWORD>` from the output and replace the `<WAZUH_INDEXER_IP>` (check the private IP address on the VMs Networking details).
+
+> curl -k -u admin:<ADMIN_PASSWORD> https://<WAZUH_INDEXER_IP>:9200
+
+10. Finally, run the following command to check if the cluster is working correctly:
+
+> curl -k -u admin:<ADMIN_PASSWORD> https://<WAZUH_INDEXER_IP>:9200/_cat/nodes?v
+
+## Step 3: Wazuh Server Installation
+
 Update packages
 sudo apt update && sudo apt upgrade -y
 
