@@ -167,36 +167,17 @@ As I stress out ealier, we will install the Wazuh Dashboard in the `wazuh-indexe
 
 > `tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt`
 
-Update packages
-sudo apt update && sudo apt upgrade -y
+5. The Wazuh server utilize TCP port 1514 and 1515 for it to function. Let's create inbound rule in the **Networking** tab of the `wazuh-server` VM.
 
-Add Wazuh repository
-curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo apt-key add -
-echo "deb https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
-sudo apt update
+![azure_11](https://github.com/user-attachments/assets/7f2338db-1709-4fd2-b06e-351c15a1bc67)
 
-Install Wazuh Manager
-sudo apt install wazuh-manager -y
+6. Let's access the Wazuh dashboard using any browser. Use the `admin` user credentials from the `wazuh-passwords.txt` file.
 
-Start Wazuh Manager
-sudo systemctl start wazuh-manager
-sudo systemctl enable wazuh-manager
+> -**URL**: `https://<WAZUH_DASHBOARD_IP_ADDRESS>
+> - **Username**: `admin`
+> - **Password**: `<ADMIN_PASSOWRD>`
 
-Your Wazuh Manager is now running!
-
-## Step 3: Install Wazuh Agent on Other Machines
-
-On each machine you want to monitor:
-
-ssh your-username@
-
-Prepare the system
-sudo apt update && sudo apt upgrade -y
-
-Add Wazuh repository
-curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo apt-key add -
-echo "deb https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
-sudo apt update
+A warning message will appear stating that the certificate was not issued by a trusted authority. We will accept it since this is only for lab purpose. However, you can add the certifcate in the advanced options of the web browser. The file `root-ca.pem` (You can find this file in the wazuh indexer VM) can be imported to the certificate manager of the browser.
 
 Install Wazuh Agent
 sudo apt install wazuh-agent -y
