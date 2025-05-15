@@ -187,7 +187,7 @@ Wazuh agent is a multi-platform component of Wazuh. It runs on the endpoints (co
 
 1. Let's connect to our wazuh-agent VM (Windows) using RDP.
    
-![azure_13](https://github.com/user-attachments/assets/9ad1abab-16f1-43b5-b3e8-376b4fa14d55)
+<img src="https://github.com/user-attachments/assets/9ad1abab-16f1-43b5-b3e8-376b4fa14d55" width="500">
 
 2. Go to the **Endpoint** tab then click **Deploy new agent**.
 
