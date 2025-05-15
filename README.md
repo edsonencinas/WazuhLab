@@ -126,6 +126,13 @@ Example:
 
 > `sudo bash wazuh-install.sh --wazuh-indexer wazuh-indexer-dashboard`
 
+7. **Cluster Initialization**: Let's run the Wazuh installation assistant, to load the new certificates information and start the cluster.
+
+> `sudo bash wazuh-install.sh --start-cluster`
+
+8. To get the _admin password_, run the following command:
+
+> tar -axf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt -O | grep -P "\'admin\'" -A 1
 
 Update packages
 sudo apt update && sudo apt upgrade -y
