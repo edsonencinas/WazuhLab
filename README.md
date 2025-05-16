@@ -24,7 +24,7 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
 
 ## Step 1: Create Your Azure Virtual Machines (VMs)
 
-**We'll need a couple of VMs:**
+**We'll need atleast three VMs for this project:**
 
 - **Wazuh Indexer**: The centra component that indexes and stores alerts from the wazuh server
 - **Wazuh Dashboard**: Provides web interface for analyzing, mining, and visualizing data
