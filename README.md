@@ -73,8 +73,8 @@ In this step-by-step guide, we'll walk through how to deploy Wazuh in Azure, giv
     
 ![azure_5](https://github.com/user-attachments/assets/a6a209f8-b27c-434e-a062-8f9ef65b2279)
 
-- Click **create** again, after that Azure will create and deploy the VM instance
-- You will be prompted to download the SSH private key, download and keep it. (We need it later during wazuh installation)
+- Click **create** again, Azure will now create and deploy the VM instance
+- You will be prompted to download the SSH private key, download and keep it. (We need it later when we connect to this VM)
 
 ![azure_7](https://github.com/user-attachments/assets/bc1065cb-201e-4bd1-be78-8f1b9e40b4f2)
 
