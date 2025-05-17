@@ -96,7 +96,7 @@ At this point we already have three VMs, **wazuh-indexer-dashboard**, **wazuh-se
 Wazuh Indexer Installation: 
 1. Connect to **wazuh-indexer-dashboard** VM through SSH.
 ```
-ssh -i '/path/to/keyfile' username@server`
+<tab><tab>ssh -i '/path/to/keyfile' username@server`
 ```
 Example:
 ```
